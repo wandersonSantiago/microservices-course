@@ -18,7 +18,7 @@ public class ApiExceptionHandler extends ResponseEntityExceptionHandler {
 	public ResponseEntity<?> handleExceptionEntity(WorkerNotFoundException e, WebRequest request) {
 		var map = new HashMap<>();
 		map.put("status", "404");
-		map.put("mesage", e.getMessage());
+		map.put("message", e.getMessage());
 		map.put("timestamp", OffsetDateTime.now());
 		return handleExceptionInternal(e, map, new HttpHeaders(), HttpStatus.NOT_FOUND, request);
 	}
