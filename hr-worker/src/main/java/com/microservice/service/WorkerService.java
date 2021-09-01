@@ -14,12 +14,11 @@ public class WorkerService {
 
 	@Autowired
 	private WorkerRepository repository;
-	
-	
-	public List<Worker> findAll(){
+
+	public List<Worker> findAll() {
 		return repository.findAll();
 	}
-	
+
 	public Worker findById(Long id) {
 		return repository.findById(id).orElseThrow(WorkerNotFoundException::new);
 	}

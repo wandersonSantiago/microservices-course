@@ -14,14 +14,12 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 @ControllerAdvice
 public class ApiExceptionHandler extends ResponseEntityExceptionHandler {
 
-	
-	
 	@ExceptionHandler(WorkerNotFoundException.class)
-	public ResponseEntity<?> handleExceptionEntity(WorkerNotFoundException e, WebRequest request){
+	public ResponseEntity<?> handleExceptionEntity(WorkerNotFoundException e, WebRequest request) {
 		var map = new HashMap<>();
-		map.put("Status", "404");
-		map.put("Title", "Worker not found!");
-		map.put("Timestamp", OffsetDateTime.now());
+		map.put("status", "404");
+		map.put("mesage", e.getMessage());
+		map.put("timestamp", OffsetDateTime.now());
 		return handleExceptionInternal(e, map, new HttpHeaders(), HttpStatus.NOT_FOUND, request);
 	}
 }
