@@ -1,4 +1,4 @@
-package com.microservice.resource;
+package com.microservice.resources;
 
 import java.util.List;
 
@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.microservice.model.Worker;
-import com.microservice.service.WorkerService;
+import com.microservice.models.Worker;
+import com.microservice.services.WorkerService;
 
 @RestController
 @RequestMapping(value = "/workers")

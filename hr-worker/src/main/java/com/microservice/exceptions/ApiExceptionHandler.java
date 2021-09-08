@@ -1,4 +1,4 @@
-package com.microservice.exception;
+package com.microservice.exceptions;
 
 import java.time.OffsetDateTime;
 import java.util.HashMap;

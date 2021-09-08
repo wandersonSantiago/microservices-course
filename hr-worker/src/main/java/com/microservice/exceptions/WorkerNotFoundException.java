@@ -1,4 +1,4 @@
-package com.microservice.exception;
+package com.microservice.exceptions;
 
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 

@@ -1,4 +1,6 @@
-package com.microservice.model;
+package com.microservice.models;
+
+import java.math.BigDecimal;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -24,6 +26,6 @@ public class Worker {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String name;
-	private Double dailyIncome;
+	private BigDecimal dailyIncome;
 	
 }

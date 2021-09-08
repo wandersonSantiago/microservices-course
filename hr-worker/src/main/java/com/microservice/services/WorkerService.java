@@ -1,13 +1,13 @@
-package com.microservice.service;
+package com.microservice.services;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.microservice.exception.WorkerNotFoundException;
-import com.microservice.model.Worker;
-import com.microservice.repository.WorkerRepository;
+import com.microservice.exceptions.WorkerNotFoundException;
+import com.microservice.models.Worker;
+import com.microservice.repositories.WorkerRepository;
 
 @Service
 public class WorkerService {
