@@ -3,6 +3,7 @@ package com.microservice.hruser.models;
 import java.util.HashSet;
 import java.util.Set;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -12,6 +13,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
+import javax.validation.constraints.Email;
 
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
@@ -33,6 +35,9 @@ public class User {
 	@EqualsAndHashCode.Include
 	private Long id;
 	private String name;
+	
+	@Email
+	@Column(unique = true)
 	private String email;
 	private String password;
 
