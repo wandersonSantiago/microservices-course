@@ -23,7 +23,7 @@ import lombok.extern.log4j.Log4j2;
 @RequestMapping(value = "/workers")
 public class WorkerResource {
 	
-	@Value("${test.config}")
+	@Value("${spring.application.name}")
 	private String testConfig;
 	
 	@Autowired
